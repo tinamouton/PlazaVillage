@@ -1,0 +1,13 @@
+body {padding-top: 60px;font-family: 'Merriweather Sans', sans-serif;  /* 60px to make the container go all the way to the bottom of the topbar */}
+a{} a:hover{} a:active{}
+div#main{ 
+	position:fixed; top:40px; left:0; height:100%; width:100%; color:#fff; 
+	background: url('/Content/images/PlazaVillage-Main.jpg') no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+} 
+div#wrapper{ display:table; }
+nav.navbar ul.dropdown-menu li a:hover{background:#000;}
+section#home-content{ display:table-cell;vertical-align:middle; text-shadow:3px 3px 2px #333;}
