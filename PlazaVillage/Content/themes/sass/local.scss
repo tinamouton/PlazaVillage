@@ -1,3 +1,4 @@
+@import "font-awesome";
 body {padding-top: 60px;font-family: 'Merriweather Sans', sans-serif;  /* 60px to make the container go all the way to the bottom of the topbar */}
 a{} a:hover{} a:active{}
 div#main{ 
@@ -7,7 +8,30 @@ div#main{
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
+
+	/* old flexbox - Webkit and Firefox. For backwards compatibility */
+	display: -webkit-box; display: -moz-box;
+	/* middle-aged flexbox. Needed for IE 10 */
+	display: -ms-flexbox;
+	/* new flexbox. Chrome (prefix), Opera, upcoming browsers without */
+	display: -webkit-flex;
+	display: flex;
+					
+	/* old flexbox: box-* */
+	-webkit-box-align: center; -moz-box-align: center;
+	/* middle flexbox: flex-* */
+	-ms-flex-align: center;
+	/* new flexbox: various property names */
+	-webkit-align-items: center;
+	align-items: center;
+					
+	-webkit-box-pack: center; -moz-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
 } 
-div#wrapper{ display:table; }
+div#wrapper{}
 nav.navbar ul.dropdown-menu li a:hover{background:#000;}
-section#home-content{ display:table-cell;vertical-align:middle; text-shadow:3px 3px 2px #333;}
+section#home-content{text-shadow:2px 2px 1px #222;}
+	section#home-content hgroup{text-align:center;}section#home-content hgroup h1{ font-size:350%; } section#home-content hgroup h2{ font-size:175%; }
+	section#home-content a.circle{width:200px; border-radius:50%;background:#000;color:#fff;} 
