@@ -64,6 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\images\PlazaVillage-Main.jpg" />
+    <Content Include="Content\Scripts\jquery.address-1.5.min.js" />
     <Content Include="Content\themes\bootstrap-responsive.css" />
     <Content Include="Content\themes\bootstrap-responsive.min.css" />
     <Content Include="Content\themes\bootstrap.css" />
@@ -142,6 +143,7 @@
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.tooltip.min.css" />
+    <Content Include="Content\themes\styles\font-awesome.css" />
     <Content Include="Content\themes\styles\local.css" />
     <Content Include="Content\Scripts\bootstrap.js" />
     <Content Include="Content\Scripts\bootstrap.min.js" />
@@ -172,7 +174,13 @@
     <Content Include="Views\index.cshtml" />
     <Content Include="Content\Scripts\jquery-2.0.2.min.map" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Content\themes\sass\font-awesome.scss" />
+    <Content Include="Content\themes\sass\font-awesome.scss">
+      <Compile>True</Compile>
+      <Minify>True</Minify>
+      <OutputFolder>..\styles</OutputFolder>
+      <CompileStyle>Nested</CompileStyle>
+      <DebugInfo>False</DebugInfo>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
