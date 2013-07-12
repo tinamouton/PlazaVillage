@@ -39,17 +39,17 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Nancy, Version=0.17.1.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Nancy, Version=0.18.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Nancy.0.17.1\lib\net40\Nancy.dll</HintPath>
+      <HintPath>..\packages\Nancy.0.18.0\lib\net40\Nancy.dll</HintPath>
     </Reference>
-    <Reference Include="Nancy.Hosting.Aspnet, Version=0.17.1.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Nancy.Hosting.Aspnet, Version=0.18.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Nancy.Hosting.Aspnet.0.17.1\lib\net40\Nancy.Hosting.Aspnet.dll</HintPath>
+      <HintPath>..\packages\Nancy.Hosting.Aspnet.0.18.0\lib\net40\Nancy.Hosting.Aspnet.dll</HintPath>
     </Reference>
-    <Reference Include="Nancy.ViewEngines.Razor, Version=0.17.1.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Nancy.ViewEngines.Razor, Version=0.18.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Nancy.Viewengines.Razor.0.17.1\lib\net40\Nancy.ViewEngines.Razor.dll</HintPath>
+      <HintPath>..\packages\Nancy.Viewengines.Razor.0.18.0\lib\net40\Nancy.ViewEngines.Razor.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -63,24 +63,19 @@
     <Reference Include="System.Configuration" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\images\PlazaVillage-Main.jpg" />
-    <Content Include="Content\Scripts\jquery.address-1.5.min.js" />
-    <Content Include="Content\themes\bootstrap-responsive.css" />
-    <Content Include="Content\themes\bootstrap-responsive.min.css" />
-    <Content Include="Content\themes\bootstrap.css" />
-    <Content Include="Content\themes\bootstrap.min.css" />
+    <Content Include="Content\font\fontawesome-webfont.svg" />
     <Content Include="Content\themes\font-awesome-ie7.css" />
     <Content Include="Content\themes\font-awesome-ie7.min.css" />
     <Content Include="Content\themes\font-awesome.css" />
     <Content Include="Content\themes\font-awesome.min.css" />
-    <Content Include="Content\font\fontawesome-webfont.svg" />
+    <Content Include="Content\images\PlazaVillage-Main.jpg" />
+    <Content Include="Content\themes\bootstrap-responsive.css" />
+    <Content Include="Content\themes\bootstrap-responsive.min.css" />
+    <Content Include="Content\themes\bootstrap.css" />
+    <Content Include="Content\themes\bootstrap.min.css" />
     <Content Include="Content\images\glyphicons-halflings-white.png" />
     <Content Include="Content\images\glyphicons-halflings.png" />
     <Content Include="Content\images\nancy-logo.png" />
-    <Content Include="Content\font\fontawesome-webfont.woff" />
-    <Content Include="Content\font\fontawesome-webfont.ttf" />
-    <Content Include="Content\font\fontawesome-webfont.eot" />
-    <Content Include="Content\font\FontAwesome.otf" />
     <Content Include="Content\themes\base\images\animated-overlay.gif" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
@@ -143,7 +138,12 @@
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.tooltip.min.css" />
-    <Content Include="Content\themes\styles\font-awesome.css" />
+    <Content Include="Content\themes\styles\font-awesome-ie7.css" />
+    <Content Include="Content\themes\styles\font-awesome.css">
+      <Compile>True</Compile>
+      <Minify>False</Minify>
+      <OutputFolder>.</OutputFolder>
+    </Content>
     <Content Include="Content\themes\styles\local.css" />
     <Content Include="Content\Scripts\bootstrap.js" />
     <Content Include="Content\Scripts\bootstrap.min.js" />
@@ -154,6 +154,10 @@
       <CompileStyle>Nested</CompileStyle>
       <DebugInfo>False</DebugInfo>
     </Content>
+    <Content Include="Content\font\fontawesome-webfont.eot" />
+    <Content Include="Content\font\fontawesome-webfont.ttf" />
+    <Content Include="Content\font\fontawesome-webfont.woff" />
+    <Content Include="Content\font\FontAwesome.otf" />
     <None Include="Content\Scripts\jquery-2.0.2.intellisense.js" />
     <Content Include="Content\Scripts\jquery-2.0.2.js" />
     <Content Include="Content\Scripts\jquery-2.0.2.min.js" />
@@ -174,6 +178,14 @@
     <Content Include="Views\index.cshtml" />
     <Content Include="Content\Scripts\jquery-2.0.2.min.map" />
     <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\login.cshtml" />
+    <Content Include="Content\themes\sass\font-awesome-ie7.scss">
+      <Compile>True</Compile>
+      <Minify>True</Minify>
+      <OutputFolder>..\styles</OutputFolder>
+      <CompileStyle>Nested</CompileStyle>
+      <DebugInfo>False</DebugInfo>
+    </Content>
     <Content Include="Content\themes\sass\font-awesome.scss">
       <Compile>True</Compile>
       <Minify>True</Minify>
@@ -181,6 +193,13 @@
       <CompileStyle>Nested</CompileStyle>
       <DebugInfo>False</DebugInfo>
     </Content>
+    <Content Include="Content\themes\sass\_bootstrap.scss" />
+    <Content Include="Content\themes\sass\_core.scss" />
+    <Content Include="Content\themes\sass\_extras.scss" />
+    <Content Include="Content\themes\sass\_icons.scss" />
+    <Content Include="Content\themes\sass\_mixins.scss" />
+    <Content Include="Content\themes\sass\_path.scss" />
+    <Content Include="Content\themes\sass\_variables.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -217,8 +236,8 @@
   <PropertyGroup>
     <PostBuildEvent>
 if $(ConfigurationName) == Debug (
-xcopy /s /y /R "$(SolutionDir)packages\Nancy.Viewengines.Razor.0.17.1\BuildProviders\Nancy.ViewEngines.Razor.BuildProviders.dll" "$(ProjectDir)bin\"
-xcopy /s /y /R "$(SolutionDir)packages\Nancy.Viewengines.Razor.0.17.1\lib\Net40\Nancy.ViewEngines.Razor.dll" "$(ProjectDir)bin\"
+xcopy /s /y /R "$(SolutionDir)packages\Nancy.Viewengines.Razor.0.18.0\BuildProviders\Nancy.ViewEngines.Razor.BuildProviders.dll" "$(ProjectDir)bin\"
+xcopy /s /y /R "$(SolutionDir)packages\Nancy.Viewengines.Razor.0.18.0\lib\Net40\Nancy.ViewEngines.Razor.dll" "$(ProjectDir)bin\"
 )</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

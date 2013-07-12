@@ -6,36 +6,60 @@
         <!-- Bootstrap -->
         <link href="/Content/themes/bootstrap.css" rel="stylesheet" />
         <link href="/Content/themes/bootstrap-responsive.css" rel="stylesheet" />
+        <link href="/Content/themes/styles/font-awesome.css" rel="stylesheet" />
         <link href="/Content/themes/styles/local.css" rel="stylesheet" />
         <link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:400,400italic,800,800italic' rel='stylesheet' type='text/css' />
         @RenderSection("additionalStyles", false)
-        
         <script src="/Content/Scripts/jquery-2.0.2.min.js"></script>
         <script src="/Content/Scripts/bootstrap.min.js"></script>
-        <script src="/Content/Scripts/jquery.address-1.5.min.js"></script>
+        <script>
+            var scrollToElement = function (element) {
+                $('html, body').animate({
+                    scrollTop: $(element).offset().top - 150
+                }, 1000);
+            };
+            $(document).ready(function () {
+                $(this).scrollTop(0);
+                $('.brand').click(function () {
+                    scrollToElement('body');
+                });
+                $('.circle').click(function (e) {
+                    e.preventDefault();
+                    scrollToElement($(this).attr('href'));
+                });
+                $('.navbar a[href*="#"]').click(function (e) {
+                    e.preventDefault();
+                    scrollToElement($(this).attr('href'));
+                });
+            });
+    </script>
         @RenderSection("additionalScripts", false)
     </head>
     <body>
         <div class="container">
             <div id="main"></div>
-            <nav class="navbar navbar-inverse navbar-fixed-top">
+            <nav id="navbar" class="navbar navbar-inverse navbar-fixed-top">
                 <div class="navbar-inner">
                     <div class="container">
-                        <a class="brand active" href="#">Plaza Village Condominiums</a>
+                        <a class="brand" href="/"><i class="icon-home"></i> Plaza Village Condominiums</a>
                         <div class="nav-collapse collapse pull-right">
                             <ul class="nav">
-                                <li class="dropdown">
-                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Documents <b class="caret"></b></a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="#">Handbook</a></li>
-                                        <li><a href="#">Fees</a></li>
-                                        <li><a href="#">Bylaws</a></li>
-                                        <li><a href="#">Budget</a></li>
+                                <li class="dropdown-split-left"><a href="/#documents">Documents</a></li>
+                                <li class="dropdown dropdown-split-right">
+                                    <a class="dropdown-toggle" data-toggle="dropdown"><b class="caret"></b></a>
+                                    <ul class="dropdown-menu pull-right">
+                                        <li><a href="/#documents"><i class="icon-folder-open"></i> Documents</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="http://plazavillagecondos.com/_documents/handbook8-2009.pdf"><i class="icon-file"></i> Handbook</a></li>
+                                        <li><a href="#"><i class="icon-file"></i> Fees</a></li>
+                                        <li><a href="#"><i class="icon-file"></i> Bylaws</a></li>
+                                        <li><a href="#"><i class="icon-file"></i> Budget</a></li>
                                     </ul>
                                 </li>
-                                <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Rules & Regulations <b class="caret"></b></a>
-                                    <ul class="dropdown-menu">
+                                <li class="dropdown-split-left"><a href="/#documents">Rules & Regulations</a></li>
+                                <li class="dropdown dropdown-split-right">
+                                    <a class="dropdown-toggle" data-toggle="dropdown"><b class="caret"></b></a>
+                                    <ul class="dropdown-menu pull-right">
                                         <li><a href="#">Rules & Regulations Handbook</a></li>
                                         <li class="divider"></li>
                                         <li class="nav-header">Rules</li>
@@ -44,8 +68,8 @@
                                         <li><a href="#">Parking Rules</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="#help">Help</a></li>
-                                <li><a href="#contact">Contact</a></li>
+                                <li><a href="/#help">Help <i class="icon-question-sign"></i></a></li>
+                                <li><a href="/#contacts">Contact <i class="icon-phone-sign"></i></a></li>
                             </ul>
                         </div><!--/.nav-collapse -->
                     </div>
@@ -56,6 +80,26 @@
         <!-- Scripts
             ================================================== -->
         <!-- Placed at the end of the document so the pages load faster -->
-        
+        <script>
+            var scrollToElement = function (element) {
+                $('html, body').animate({
+                    scrollTop: $(element).offset().top - 150
+                }, 1000);
+            };
+            $(document).ready(function () {
+                $(this).scrollTop(0);
+                $('.brand').click(function () {
+                    scrollToElement('body');
+                });
+                $('.circle').click(function (e) {
+                    e.preventDefault();
+                    scrollToElement($(this).attr('href'));
+                });
+                //                $('.navbar a[href*="#"]').click(function (e) {
+                //                    scrollToElement($(this).attr('href'));
+                //                    return false;
+                //                });
+            });
+        </script>
     </body>
 </html>
