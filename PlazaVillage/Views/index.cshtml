@@ -2,51 +2,55 @@
     Layout = "Shared/_Layout.cshtml";
 }
 @section additionalScripts{
-    <script>
-        var scrollToElement = function (element) {
-            $('html, body').animate({
-                scrollTop: $(element).offset().top - 200
-            }, 1000);
-        };
-        $(document).ready(function () {
-            $(this).scrollTop(0);
-            $('.circle').click(function (e) {
-                e.preventDefault();
-                scrollToElement($(this).attr('href'));
-            });
-        });
-    </script>
      }
 <div class="section-wrapper">    
-    <section id="home-content">
+    <section id="_home-content">
         <hgroup>
             <h1>The Best of Both Worlds</h1>
             <h2>The Freedom of Your Own Home</h2>
             <h2>The Amenities of a Shared Community</h2>
         </hgroup>
-        <a href="#documents" class="circle"><i class="icon-chevron-down"></i></a>
+        <div class="next"><a href="#documents" class="circle"><i class="icon-chevron-down"></i></a></div>
     </section>
 </div>
 <div class="section-wrapper">
     <section id="documents">
-        <p>Documents</p>
-        <a href="#rules" class="circle"><i class="icon-chevron-down"></i></a>
+        <div class="next"><a href="#home-content" class="circle"><i class="icon-chevron-up"></i></a></div>
+        <h2>Documents</h2>
+        <ul class="unstyled">
+            <li><a href="#"><i class="icon-file"></i> Handbook</a></li>
+            <li><a href="#"><i class="icon-file"></i> Bylaws</a></li>
+            <li><a href="#"><i class="icon-file"></i> Fees</a></li>
+            <li><a href="#"><i class="icon-file"></i> Budget</a></li>
+        </ul>
+        <div class="next"><a href="#rules" class="circle"><i class="icon-chevron-down"></i></a></div>
     </section>
 </div>
 <div class="section-wrapper">
     <section id="rules">
-        <p>Rules & Regulations</p>
-        <a href="#help" class="circle"><i class="icon-chevron-down"></i></a>
+        <div class="next"><a href="#documents" class="circle"><i class="icon-chevron-up"></i></a></div>
+        <h2>Rules & Regulations</h2>
+        <ul class="unstyled">
+            <li><a href="#"><i class="icon-file"></i> Rules & Regulations Handbook</a></li>
+            <li><a href="#"><i class="icon-star"></i>Pet Rules</a></li>
+            <li><a href="#"><i class="icon-star"></i>Parking Rules</a></li>
+            <li><a href="#"><i class="icon-star"></i>Pool Rules</a></li>
+        </ul>
+        <div class="next"><a href="#help" class="circle"><i class="icon-chevron-down"></i></a></div>
     </section>
 </div>
 <div class="section-wrapper">
     <section id="help">
-        <p>Help</p>
-        <a href="#contacts" class="circle"><i class="icon-chevron-down"></i></a>
+        <div class="next"><a href="#rules" class="circle"><i class="icon-chevron-up"></i></a></div>
+        <h2>Help</h2>
+        <p>FAQ and other details</p>
+        <div class="next"><a href="#contacts" class="circle"><i class="icon-chevron-down"></i></a></div>
     </section>
 </div>
 <div class="section-wrapper">
     <section id="contacts">
-        <p>Contacts</p>
+        <h2>Contacts</h2>
+        <p>Board of Directors w/ Optional Contacts (ph or email or both)</p>
+        <p>button for contact; pop up modal box</p>
     </section>
 </div>

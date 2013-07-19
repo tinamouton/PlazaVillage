@@ -14,11 +14,32 @@ div#main{
 
 } 
 div.section-wrapper{position:relative;width:100%;}
-nav.navbar .container{margin:auto;}
-nav.navbar ul.dropdown-menu li a:hover{background:#000;}
-
-section{background:white;padding:100px;margin:180px 0;text-align:center;color:#000;}
-	section a.circle{text-align:center;text-decoration:none;padding:15px 20px; border-radius:50%;background-color:#ccc;background-color:hsla(0, 0%, 60%, 0.5);color:#fff;} 
-	section a.circle:hover{background-color:hsla(0, 0%, 60%, 1)}
-section#home-content{background:transparent;}
-	section#home-content hgroup{text-shadow:2px 2px 1px #222;margin-bottom:35px;color:#fff;}section#home-content hgroup h1{ font-size:350%; } section#home-content hgroup h2{ font-size:160%;line-height:1.5rem; }
+nav.navbar {
+	.container{ margin:auto; }
+	ul.dropdown-menu li a:hover{background:#000;}
+	.nav > li.dropdown-split-right > a {padding-left: 7px;}
+	.nav > li.dropdown-split-left > a {padding-right: 0;}
+	}
+section, form{background:white;padding:5%;margin:15% 0;text-align:left;color:#000;}
+section div.next {
+	text-align:center;
+	a.circle{text-align:center;text-decoration:none;padding:15px 20px; border-radius:50%;background-color:#ccc;background-color:hsla(0, 0%, 60%, 0.5);color:#fff;} 
+	a.circle:hover{background-color:hsla(0, 0%, 60%, 1)}
+	}
+section#_home-content{
+	background:transparent;margin:20% 10%;text-align:center;
+	hgroup{ 
+		text-shadow:2px 2px 1px #222;margin-bottom:35px;color:#fff;
+		h1{ font-size:350%; } 
+		h2{ font-size:160%;line-height:1.5rem; }
+		}
+	}
+section#_documents {
+	h2{color:#666;}
+	ul.unstyled {
+		li{width:220px;}
+		li:hover{background:#ddd;border-radius:2px;} 
+		a{line-height:2rem;padding:5px;} 
+		a:hover{text-decoration:none;}
+		}
+	}

@@ -11,6 +11,13 @@ namespace PlazaVillage.Modules
                     ViewBag.Title = "Plaza Village Condominiums";
                     return View["index"];
                 };
+
+            Get["/login"] = parameters =>
+            {
+                ViewBag.Title = "Plaza Village Condominiums - Admin Login";
+                return View["login"];
+            };
+
         }
     }
 }
