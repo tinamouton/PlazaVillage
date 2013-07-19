@@ -1,0 +1,63 @@
+@import "font-awesome";
+html{margin:0;padding:0;}
+body {font-family: 'Merriweather Sans', sans-serif;  /* 60px to make the container go all the way to the bottom of the topbar */}
+a{} a:hover{} a:active{}
+div.container{position:relative;width:100%;height:100%;margin:0;padding:0;color:#fff}
+div#main{ 
+	position:fixed;
+	height:100%; width:100%; color:#fff; margin:0;padding:0; 
+	background: #000 url('/Content/images/PlazaVillage-Main.jpg') no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+
+} 
+div.section-wrapper{position:relative;width:100%;}
+<<<<<<< HEAD
+nav.navbar {
+	.container{ margin:auto; }
+	ul.dropdown-menu li a:hover{background:#000;}
+	.nav > li.dropdown-split-right > a {padding-left: 7px;}
+	.nav > li.dropdown-split-left > a {padding-right: 0;}
+	}
+section, form{background:white;padding:5%;margin:15% 0;text-align:left;color:#000;}
+section div.next {
+	text-align:center;
+	a.circle{text-align:center;text-decoration:none;padding:15px 20px; border-radius:50%;background-color:#ccc;background-color:hsla(0, 0%, 60%, 0.5);color:#fff;} 
+	a.circle:hover{background-color:hsla(0, 0%, 60%, 1)}
+	}
+section#_home-content{
+	background:transparent;margin:20% 10%;text-align:center;
+	hgroup{ 
+		text-shadow:2px 2px 1px #222;margin-bottom:35px;color:#fff;
+		h1{ font-size:350%; } 
+		h2{ font-size:160%;line-height:1.5rem; }
+		}
+	}
+section#_documents {
+	h2{color:#666;}
+	ul.unstyled {
+		li{width:220px;}
+		li:hover{background:#ddd;border-radius:2px;} 
+		a{line-height:2rem;padding:5px;} 
+		a:hover{text-decoration:none;}
+		}
+	}
+=======
+nav.navbar .container{margin:auto;}
+nav.navbar ul.dropdown-menu li a:hover{background:#000;}
+	nav.navbar .nav > li.dropdown-split-right > a {padding-left: 7px;}
+	nav.navbar .nav > li.dropdown-split-left > a {padding-right: 0;}
+
+section, form{background:white;padding:5%;margin:15% 0;text-align:left;color:#000;}
+	section div.next{text-align:center;}
+		section div.next a.circle{text-align:center;text-decoration:none;padding:15px 20px; border-radius:50%;background-color:#ccc;background-color:hsla(0, 0%, 60%, 0.5);color:#fff;} 
+		section div.next a.circle:hover{background-color:hsla(0, 0%, 60%, 1)}
+section#home-content{background:transparent;margin:20% 10%;text-align:center;}
+	section#home-content hgroup{text-shadow:2px 2px 1px #222;margin-bottom:35px;color:#fff;}section#home-content hgroup h1{ font-size:350%; } section#home-content hgroup h2{ font-size:160%;line-height:1.5rem; }
+section#documents{}
+	section#documents h2{color:#666;}
+	section#documents ul.unstyled li{width:220px;}section#documents ul.unstyled li:hover{background:#ddd;border-radius:2px;} 
+	section#documents ul.unstyled a{line-height:2rem;padding:5px;} section#documents ul.unstyled a:hover{text-decoration:none;}
+>>>>>>> 1086301b0f7773170eecfbf0ec5958030698314e
