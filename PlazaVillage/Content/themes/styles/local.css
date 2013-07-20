@@ -1507,30 +1507,30 @@ section div.next {
   section div.next a.circle:hover {
     background-color: #999999; }
 
-section#_home-content {
+section#home-content {
   background: transparent;
   margin: 20% 10%;
   text-align: center; }
-  section#_home-content hgroup {
+  section#home-content hgroup {
     text-shadow: 2px 2px 1px #222;
     margin-bottom: 35px;
     color: #fff; }
-    section#_home-content hgroup h1 {
+    section#home-content hgroup h1 {
       font-size: 350%; }
-    section#_home-content hgroup h2 {
+    section#home-content hgroup h2 {
       font-size: 160%;
       line-height: 1.5rem; }
 
-section#_documents h2 {
+section#documents h2 {
   color: #666; }
-section#_documents ul.unstyled li {
+section#documents ul.unstyled li {
   width: 220px; }
-section#_documents ul.unstyled li:hover {
+section#documents ul.unstyled li:hover {
   background: #ddd;
   border-radius: 2px; }
-section#_documents ul.unstyled a {
+section#documents ul.unstyled a {
   line-height: 2rem;
   padding: 5px; }
-section#_documents ul.unstyled a:hover {
+section#documents ul.unstyled a:hover {
   text-decoration: none; }
 

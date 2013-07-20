@@ -11,51 +11,32 @@
         <link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:400,400italic,800,800italic' rel='stylesheet' type='text/css' />
         @RenderSection("additionalStyles", false)
         <script src="/Content/Scripts/jquery-2.0.2.min.js"></script>
-        <script src="/Content/Scripts/bootstrap.min.js"></script>
-        <script>
-            var scrollToElement = function (element) {
-                $('html, body').animate({
-                    scrollTop: $(element).offset().top - 150
-                }, 1000);
-            };
-            $(document).ready(function () {
-                $(this).scrollTop(0);
-                $('.brand').click(function () {
-                    scrollToElement('body');
-                });
-                $('.circle').click(function (e) {
-                    e.preventDefault();
-                    scrollToElement($(this).attr('href'));
-                });
-                $('.navbar a[href*="#"]').click(function (e) {
-                    e.preventDefault();
-                    scrollToElement($(this).attr('href'));
-                });
-            });
-    </script>
+        <script src="/Content/Scripts/bootstrap.min.js"></script>              
         @RenderSection("additionalScripts", false)
         <script>
             var scrollToElement = function (element) {
                 $('html, body').animate({
-                    scrollTop: $(element).offset().top
+                    scrollTop: $(element).offset().top - 200
                 }, 1000);
                 return false;
             };
-            var absoluteHashing = function() {
-                // scrollTo if #_ found
-                var elem = window.location.hash.replace('#_', '#');
+            var absoluteHashing = function(hashname, home) {
+                // set elem to scroll value
+                var elem = (home) ? hashname.replace('/#_', '#') : hashname.replace('#_', '#');
                 // find element to scroll to
                 if (elem) {
+                    window.location.hash = elem;
                     scrollToElement(elem);
                 }
             };
             $(document).ready(function () {
                 // replace # with #_ in all links containing #
+                alert('load page');
                 $('a[href*=#]').each(function () {
                     $(this).attr('href', $(this).attr('href').replace('#', '#_'));
                 });
                 $(this).scrollTop(0);
-                absoluteHashing();
+                absoluteHashing(window.location.hash, $("#home-content").length > 0);
                 $('.brand').click(function () {
                     scrollToElement('body');
                 });
@@ -63,7 +44,12 @@
                     e.preventDefault();
                     scrollToElement($(this).attr('href'));
                 });
-                $('.nav a[href*=#]').click(scrollToElement);
+                $('.nav a[href*="#"]').click(function () {
+                    //if home page remove slash and scroll...
+                    if ($("#home-content").length > 0) {
+                        absoluteHashing($(this).attr('href'), true);
+                    }     
+                });
             });
         </script>
     </head>
@@ -89,11 +75,7 @@
                                     </ul>
                                 </li>
                                 <li class="dropdown-split-left"><a href="/#rules">Rules & Regulations</a></li>
-                                <li class="dropdown dropdown-split-right">
-                                    <a class="dropdown-toggle" data-toggle="dropdown"><b class="caret"></b></a>
-                                <li class="dropdown dropdown-split-right">
-                                    <a class="dropdown-toggle" data-toggle="dropdown"><b class="caret"></b></a>
-                                    <ul class="dropdown-menu pull-right">
+                                <li class="dropdown dropdown-split-right"><a class="dropdown-toggle" data-toggle="dropdown"><b class="caret"></b></a>
                                     <ul class="dropdown-menu pull-right">
                                         <li><a href="/#rules"><i class="icon-file"></i> Rules & Regulations Handbook</a></li>
                                         <li class="divider"></li>
