@@ -1521,16 +1521,17 @@ section#home-content {
       font-size: 160%;
       line-height: 1.5rem; }
 
-section#documents h2 {
+section#documents h2, section#rules h2, section#help h2, section#contacts h2 {
   color: #666; }
-section#documents ul.unstyled li {
-  width: 220px; }
-section#documents ul.unstyled li:hover {
+section#documents ul.unstyled li, section#rules ul.unstyled li, section#help ul.unstyled li, section#contacts ul.unstyled li {
+  width: 300px; }
+section#documents ul.unstyled li:hover, section#rules ul.unstyled li:hover, section#help ul.unstyled li:hover, section#contacts ul.unstyled li:hover {
   background: #ddd;
   border-radius: 2px; }
-section#documents ul.unstyled a {
+section#documents ul.unstyled a, section#rules ul.unstyled a, section#help ul.unstyled a, section#contacts ul.unstyled a {
   line-height: 2rem;
-  padding: 5px; }
-section#documents ul.unstyled a:hover {
+  padding: 5px;
+  display: block; }
+section#documents ul.unstyled a:hover, section#rules ul.unstyled a:hover, section#help ul.unstyled a:hover, section#contacts ul.unstyled a:hover {
   text-decoration: none; }
 

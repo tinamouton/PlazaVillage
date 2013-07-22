@@ -34,12 +34,12 @@ section#home-content{
 		h2{ font-size:160%;line-height:1.5rem; }
 		}
 	}
-section#documents {
+section#documents, section#rules, section#help, section#contacts {
 	h2{color:#666;}
 	ul.unstyled {
-		li{width:220px;}
+		li{width:300px;}
 		li:hover{background:#ddd;border-radius:2px;} 
-		a{line-height:2rem;padding:5px;} 
+		a{line-height:2rem;padding:5px;display:block;} 
 		a:hover{text-decoration:none;}
 		}
 	}

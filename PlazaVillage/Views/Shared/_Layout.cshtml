@@ -20,35 +20,35 @@
                 }, 1000);
                 return false;
             };
-            var absoluteHashing = function(hashname, home) {
+            var absoluteHashing = function (hashname, homeNav) {
                 // set elem to scroll value
-                var elem = (home) ? hashname.replace('/#_', '#') : hashname.replace('#_', '#');
+                var elem = (homeNav) ? hashname.replace('/#_', '#') : hashname.replace('#_', '#');
                 // find element to scroll to
                 if (elem) {
-                    window.location.hash = elem;
-                    scrollToElement(elem);
+                     scrollToElement(elem);
                 }
             };
             $(document).ready(function () {
+                $(this).scrollTop(0);                
                 // replace # with #_ in all links containing #
-                alert('load page');
-                $('a[href*=#]').each(function () {
+                $('.nav a[href*=#]').each(function () {
                     $(this).attr('href', $(this).attr('href').replace('#', '#_'));
                 });
-                $(this).scrollTop(0);
-                absoluteHashing(window.location.hash, $("#home-content").length > 0);
+                absoluteHashing(window.location.hash, false);
                 $('.brand').click(function () {
                     scrollToElement('body');
                 });
                 $('.circle').click(function (e) {
                     e.preventDefault();
-                    scrollToElement($(this).attr('href'));
+                    absoluteHashing($(this).attr('href'), false);
                 });
-                $('.nav a[href*="#"]').click(function () {
+                $('.nav a[href*="#"]').click(function (e) {
                     //if home page remove slash and scroll...
                     if ($("#home-content").length > 0) {
+                        e.preventDefault();
                         absoluteHashing($(this).attr('href'), true);
-                    }     
+                    }
+                    return true;
                 });
             });
         </script>
@@ -80,9 +80,9 @@
                                         <li><a href="/#rules"><i class="icon-file"></i> Rules & Regulations Handbook</a></li>
                                         <li class="divider"></li>
                                         <li class="nav-header">Rules</li>
-                                        <li><a href="#"><i class="icon-star"></i> Pet Rules</a></li>
-                                        <li><a href="#"><i class="icon-star"></i> Pool Rules</a></li>
-                                        <li><a href="#"><i class="icon-star"></i> Parking Rules</a></li>
+                                        <li><a href="/#pets"><i class="icon-star"></i> Pet Rules</a></li>
+                                        <li><a href="/#pools"><i class="icon-star"></i> Pool Rules</a></li>
+                                        <li><a href="/#parking"><i class="icon-star"></i> Parking Rules</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="/#help">Help <i class="icon-question-sign"></i></a></li>
